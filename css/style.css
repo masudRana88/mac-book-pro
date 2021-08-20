@@ -1,0 +1,12 @@
+/* ============= Google fonts ============= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+p{
+    font-size: 18px;
+}
+table{
+    font-size: large;
+}

@@ -74,14 +74,15 @@ document.getElementById('apply-btn').addEventListener('click', function(){
    const promoCodeInpute = document.getElementById('promo-inpute');
    const promoCode = promoCodeInpute.value;
    const applyButton = document.getElementById('apply-btn');
-   const totalPrice = document.getElementsByClassName('total-price');
+   const totalPrice = document.getElementById('total');
    if(promoCode == 'stevekaku'){
-        for(const price of totalPrice){
-            const privusTotalPrice = parseFloat(price.innerText);
-            const discountPrice = privusTotalPrice * (20/100);
-            price.innerText = privusTotalPrice - discountPrice;
-        }
+        const privusTotalPrice = parseFloat(totalPrice.innerText);
+        const discountPrice = privusTotalPrice * (20/100);
+        totalPrice.innerText = privusTotalPrice - discountPrice;
         applyButton.setAttribute('disabled', true);
+   }
+   else{
+       alert('This Promo Code is not valed !!');
    }
    promoCodeInpute.value = '';
 });
